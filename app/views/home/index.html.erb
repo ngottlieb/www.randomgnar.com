@@ -1,1 +1,6 @@
-<%= link_to "Play Random Kayak Video", "http://vimeo.com/#{@video_id}", :class => "btn-large btn-primary" %>
+<%= link_to "Play Random Kayak Video", "#", :class => "btn-large btn-primary",
+ 	:id => "play-button", :name => @video_id %>
+
+<div id="player">
+	<iframe src="" width="940px" height="470px" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+</div>
