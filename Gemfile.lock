@@ -42,6 +42,10 @@ GEM
     execjs (1.4.0)
       multi_json (~> 1.0)
     hike (1.2.1)
+    httparty (0.8.3)
+      multi_json (~> 1.0)
+      multi_xml
+    httpclient (2.2.5)
     i18n (0.6.0)
     journey (1.0.4)
     jquery-rails (2.0.2)
@@ -60,6 +64,9 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.18)
     multi_json (1.3.6)
+    multi_xml (0.5.1)
+    multipart-post (1.1.5)
+    oauth (0.4.6)
     polyglot (0.3.3)
     rack (1.4.1)
     rack-cache (1.2)
@@ -112,6 +119,12 @@ GEM
     uglifier (1.2.4)
       execjs (>= 0.3.0)
       multi_json (>= 1.0.2)
+    vimeo (1.5.2)
+      httparty (>= 0.4.5)
+      httpclient (>= 2.1.5.2)
+      json (>= 1.1.9)
+      multipart-post (>= 1.0.1)
+      oauth (>= 0.4.3)
 
 PLATFORMS
   ruby
@@ -122,6 +135,6 @@ DEPENDENCIES
   rails (= 3.2.2)
   sass-rails (~> 3.2.3)
   sqlite3
-  therubyracer
   twitter-bootstrap-rails (>= 2.0.3)
   uglifier (>= 1.0.3)
+  vimeo

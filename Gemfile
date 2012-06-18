@@ -8,4 +8,7 @@ group :assets do
 end
 gem 'jquery-rails'
 gem "twitter-bootstrap-rails", ">= 2.0.3", :group => :assets
-gem "therubyracer", :group => :assets, :platform => :ruby
+# gem "therubyracer", :group => :assets, :platform => :ruby
+
+gem 'vimeo'
+gem 'json'
