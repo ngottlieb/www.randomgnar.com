@@ -4,15 +4,15 @@ $(document).ready(function() {
 		setNameVideoId($(this).attr("id"));
 	});
 	
-	$("#player").hide();
+	$("div#player").hide();
 	
 	var url_base = "http://player.vimeo.com/video/"
 	
 	$(".play-button").each(function() {
 		$(this).click(function() {
-			$("iframe").attr("src", (url_base + $("a#" + $(this).attr("id")).attr("name")));
+			$("div#player iframe").attr("src", (url_base + $("a#" + $(this).attr("id")).attr("name")));
 			setNameVideoId($(this).attr("id"));
-			$("#player").show();
+			$("div#player").show();
 		});
 	});
 });
