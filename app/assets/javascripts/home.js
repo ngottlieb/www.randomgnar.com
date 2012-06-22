@@ -1,22 +1,30 @@
 $(document).ready(function() {
-	setNameVideoId();
+	
+	$(".play-button").each(function () {
+		setNameVideoId($(this).attr("id"));
+	});
+	
 	$("#player").hide();
+	
 	var url_base = "http://player.vimeo.com/video/"
-	$("a#play-button").click(function() {
-		$("iframe").attr("src", (url_base + $("a#play-button").attr("name")));
-		setNameVideoId();
-		$("#player").show();
+	
+	$(".play-button").each(function() {
+		$(this).click(function() {
+			$("iframe").attr("src", (url_base + $("a#" + $(this).attr("id")).attr("name")));
+			setNameVideoId($(this).attr("id"));
+			$("#player").show();
+		});
 	});
 });
 
-function setNameVideoId() {
+function setNameVideoId(channel) {
 	$.ajax({
-	  url: 'video',
+	  url: ("video/" + channel),
 	  success: function(data) {
-	    $('a#play-button').attr("name", data);
+	    $("a#" + channel).attr("name", data);
 	  }
 	}).done(function() {
-		$('a#play-button').removeClass("disabled");
+		$("a#" + channel).removeClass("disabled");
 	});
 }
 
