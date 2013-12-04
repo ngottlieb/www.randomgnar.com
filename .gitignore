@@ -73,3 +73,6 @@ db/*.sqlite3
 
 # vim artifacts
 **.swp
+
+# Ignore application configuration
+/config/application.yml

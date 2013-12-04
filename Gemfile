@@ -12,3 +12,4 @@ gem "twitter-bootstrap-rails", ">= 2.0.3", :group => :assets
 gem 'vimeo'
 gem 'json'
 gem 'pg'
+gem 'figaro'
